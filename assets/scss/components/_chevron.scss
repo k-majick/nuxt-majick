@@ -1,0 +1,20 @@
+.chevron {
+  background-color: $color-silver-lite;
+  clip-path: polygon(100% 70%, 100% 85%, 50% 100%, 0 87%, 0 70%, 50% 85%);
+  margin: -45px auto 0;
+  height: 70px;
+  width: 10%;
+  display: block;
+  animation: bounce 1s infinite alternate;
+
+  &__container {
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 90px);
+    left: 0;
+    height: 45px;
+    width: 100%;
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    cursor: pointer;
+  }
+}

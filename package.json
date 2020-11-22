@@ -1,0 +1,36 @@
+{
+  "name": "nuxt-majick",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts --port 8888",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start --port 8888"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/axios": "^5.12.2",
+    "@types/vuelidate": "^0.7.13",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "googleapis": "^60.0.1",
+    "nodemailer": "^6.4.13",
+    "nuxt": "^2.14.6"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.5",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.12",
+    "node-sass": "^5.0.0",
+    "normalize-scss": "^7.0.1",
+    "nuxt-property-decorator": "^2.8.8",
+    "sass-loader": "^10.0.2",
+    "vuelidate": "^0.7.5",
+    "vuex-module-decorators": "^1.0.1"
+  }
+}

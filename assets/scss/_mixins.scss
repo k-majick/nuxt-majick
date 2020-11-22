@@ -1,0 +1,98 @@
+/* media */
+@mixin mobile {
+  @media (max-width: $mobile-max) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $desktop-min) {
+    @content;
+  }
+}
+/* grid */
+@mixin mk-container() {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  @include mobile {
+    max-width: 768px;
+  }
+  @include tablet {
+    max-width: 970px;
+  }
+  @include desktop {
+    max-width: 970px;
+  }
+}
+/* effects */
+@mixin trans($time, $prop:"") {
+  @if $prop != "" {
+    transition: $prop #{$time}s;
+  } @else {
+    transition: all #{$time}s;
+  }
+}
+/* elements */
+@mixin img {
+  width: 100%;
+  height: auto;
+}
+@mixin label {
+  display: inline-block;
+  color: $color-white;
+  padding: 7.5px 10px;
+  border-radius: 3px;
+  margin: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0;
+  background-color: $color-gray;
+  box-shadow: inset 0 0 10px $color-satan;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+@mixin btn {
+  @include trans(0.33);
+  width: fit-content;
+  border: 0;
+  color: $color-white;
+  font-family: $font-stack;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  background-color: $color-gray;
+  box-shadow: inset 0 0 10px $color-satan;
+  border-radius: 5px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $color-red;
+    color: $color-white;
+    outline: 0;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $color-gray;
+      color: $color-white;
+      outline: 0;
+    }
+  }
+}

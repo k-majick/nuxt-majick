@@ -1,0 +1,171 @@
+.modal {
+  $self: &;
+  width: fit-content;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px 15px;
+  background-color: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px transparentize($color-black, 0.5);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+
+  &__mask {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($color-black, 0.5);
+    display: table;
+    display: block;
+    transition: all 0.5s ease;
+
+    &--project {
+      overflow-y: scroll;
+    }
+  }
+
+  &__wrapper {
+    vertical-align: middle;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &--project {
+      padding: 0;
+      align-items: flex-start;
+
+      #{$self} {
+        border-radius: 0;
+        min-height: 100%;
+        width: 100%;
+        background-image: url("~@/assets/gfx/bg-modal-min.svg");
+        background-repeat: repeat-y;
+        background-size: 320px;
+        background-position: left;
+        @include mobile {
+          background-size: 240px;
+        }
+      }
+
+      #{$self}__content {
+        p {
+          text-align: left;
+          @include mobile {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  &__container {
+    @include mk-container;
+    max-width: 640px !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    color: $color-red;
+    font-weight: bolder;
+    font-size: 2.75rem;
+    cursor: pointer;
+    text-shadow: 0 0 1px $color-red;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      text-shadow: none;
+      font-weight: lighter;
+      color: $color-black;
+      margin: 15px 0;
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile {
+      flex-direction: column;
+
+      &--text {
+        text-align: center;
+
+        #{$self}__title {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 150px;
+    box-shadow: 0 0 15px $color-gray;
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+
+  &__date {
+    @include label;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+
+  &__image {
+    @include img;
+    max-width: 400px;
+    margin: 30px 0;
+    border: 1px solid $color-gray;
+  }
+
+  &__action {
+    @include btn;
+  }
+
+  &-leave-active {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    animation: modalMask 0.25s ease 0s;
+  }
+
+  &-enter-active &__container {
+    animation: modalContainer 0.25s ease 0s;
+  }
+
+  &-leave-active & {
+    // transform: scale(1.1);
+  }
+}
