@@ -28,6 +28,67 @@
 
     &--project {
       overflow-y: scroll;
+
+      #{$self}__wrapper {
+        padding: 0;
+        align-items: flex-start;
+
+        #{$self} {
+          border-radius: 0;
+          min-height: 100%;
+          width: 100%;
+          background-image: url("~@/assets/gfx/bg-modal-min.svg");
+          background-repeat: repeat-y;
+          background-size: 320px;
+          background-position: left;
+          @include mobile {
+            background-size: 240px;
+          }
+        }
+
+        #{$self}__content {
+          p {
+            text-align: left;
+            @include mobile {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    &--image {
+      #{$self} {
+        // height: 100%;
+        // width: 100%;
+        background: none;
+        padding: 0;
+      }
+
+      #{$self}__wrapper {
+        // padding: 0;
+      }
+
+      #{$self}__content {
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      #{$self}__container {
+        padding: 0;
+        max-width: none !important;
+      }
+
+      #{$self}__image {
+        position: relative;
+        max-width: none;
+        border: 0;
+        margin: 0;
+      }
+
+      #{$self}__close {
+        filter: drop-shadow(0 0 1px white);
+      }
     }
   }
 
@@ -39,33 +100,6 @@
     align-items: center;
     width: 100%;
     height: 100%;
-
-    &--project {
-      padding: 0;
-      align-items: flex-start;
-
-      #{$self} {
-        border-radius: 0;
-        min-height: 100%;
-        width: 100%;
-        background-image: url("~@/assets/gfx/bg-modal-min.svg");
-        background-repeat: repeat-y;
-        background-size: 320px;
-        background-position: left;
-        @include mobile {
-          background-size: 240px;
-        }
-      }
-
-      #{$self}__content {
-        p {
-          text-align: left;
-          @include mobile {
-            text-align: center;
-          }
-        }
-      }
-    }
   }
 
   &__container {
@@ -89,6 +123,7 @@
     font-size: 2.75rem;
     cursor: pointer;
     text-shadow: 0 0 1px $color-red;
+    z-index: 1;
 
     &:focus {
       outline: 0;
@@ -105,6 +140,10 @@
       font-weight: lighter;
       color: $color-black;
       margin: 15px 0;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -139,7 +178,7 @@
   &__title {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   &__image {

@@ -72,5 +72,9 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    @include mobile {
+      top: 0;
+      transform: translateY(0);
+    }
   }
 }

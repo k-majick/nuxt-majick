@@ -1,11 +1,16 @@
 .chevron {
   background-color: $color-silver-lite;
-  clip-path: polygon(100% 70%, 100% 85%, 50% 100%, 0 87%, 0 70%, 50% 85%);
-  margin: -45px auto 0;
-  height: 70px;
+  clip-path: polygon(100% 75%, 100% 87.5%, 50% 100%, 0 87.5%, 0 75%, 50% 87.5%);
+  margin: -50px auto 0;
+  height: 75px;
   width: 10%;
   display: block;
   animation: bounce 1s infinite alternate;
+  @include mobile {
+    margin: -95px auto 0;
+    width: 15%;
+    clip-path: polygon(100% 77.5%, 100% 90%, 50% 100%, 0 90%, 0 77.5%, 50% 87.5%);
+  }
 
   &__container {
     position: absolute;

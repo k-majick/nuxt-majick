@@ -1,5 +1,5 @@
 export const NAME = 'K-Majick';
-export const MESSAGE = 'Hello! My name is K-Majick. I work as a Front-End Developer.';
+export const MESSAGE = 'Hello! My name is <strong>K-Majick</strong>. I work as a&nbsp;professional <strong>Front-End Developer</strong>.';
 
 export const PATHSSERVICES = {
   posts: {

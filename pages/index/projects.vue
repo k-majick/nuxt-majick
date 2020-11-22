@@ -8,7 +8,7 @@
       <div class="project__title" @click.self="toggleModal(post.id, true)">{{ post.title.rendered }}</div>
       <img class="project__image" :src="post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url" :alt="post._embedded['wp:featuredmedia'][0].alt_text || post.title.rendered">
       <transition name="modal">
-        <Modal v-show="openModal(post.id)" @close="toggleModal(post.id, true)" :isProject="true">
+        <Modal v-show="openModal(post.id)" @close="toggleModal(post.id, true)" :modalType="'project'">
           <div slot="content" class="modal__content">
             <div class="modal__details">
               <img class="modal__logo" :src="post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url" :alt="post._embedded['wp:featuredmedia'][0].alt_text || post.title.rendered">
@@ -72,7 +72,7 @@ export default class Projects extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../assets/scss/components/_projects";
 @import "../../assets/scss/components/_modal";
 </style>

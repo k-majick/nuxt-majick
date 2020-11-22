@@ -7,6 +7,7 @@
     </a>
     <div class="avatar">
       <h2 class="avatar__title">{{ name }}</h2>
+      <h2 class="avatar__message--mobile" v-html="message"></h2>
       <div class="avatar__container" v-hover-message="message">
         <div class="avatar__message"></div>
         <div class="avatar__flipper">
@@ -16,7 +17,7 @@
       </div>
       <div class="avatar__shadow"></div>
     </div>
-    <div class="header__arrow"></div>
+    <div class="header__arrow" @click="scrollTo('main')"></div>
     <a class="chevron__container" @click="scrollTo('main')">
       <div class="chevron"></div>
     </a>

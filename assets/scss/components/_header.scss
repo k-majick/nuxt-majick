@@ -33,7 +33,7 @@
     @include mobile {
       margin-left: initial;
       min-height: 10vh;
-      margin-top: 45px;
+      margin-top: 75px;
     }
   }
 
@@ -55,6 +55,9 @@
       padding-bottom: 90px;
       background: $color-silver-lite;
       clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+      @include mobile {
+        padding-bottom: 45px;
+      }
     }
   }
 }
