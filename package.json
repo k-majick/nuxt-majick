@@ -6,7 +6,7 @@
     "dev": "nuxt-ts --port 8888",
     "build": "nuxt-ts build",
     "generate": "nuxt-ts generate",
-    "start": "nuxt-ts start --port 8888"
+    "start": "nuxt-ts start"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
