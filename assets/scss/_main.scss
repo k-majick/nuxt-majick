@@ -26,7 +26,6 @@ body {
 
 .main {
   $self: &;
-  background-color: $color-red;
   position: relative;
   height: 100vh;
 
@@ -53,6 +52,7 @@ body {
   }
 
   &__jungle {
+    background-color: $color-red;
     background-image: url("~@/assets/gfx/jungle-red-min.jpg");
     background-size: cover;
     background-position: 50%;

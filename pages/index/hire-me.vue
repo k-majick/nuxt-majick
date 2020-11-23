@@ -54,16 +54,19 @@ import {
   email,
   minLength,
   maxLength,
-  required
+  required,
+  helpers
 } from 'vuelidate/lib/validators';
 import axios from "axios";
+
+const alphaDiacritic = helpers.regex('alphaDiacritic', /^[a-zA-ZÀ-ž\s]*$/);
 
 @Component({
   mixins: [GetPageMxn, ToggleModalMxn, validationMixin],
   validations: {
     name: {
       required,
-      alpha,
+      alphaDiacritic,
       minLength: minLength(3),
       maxLength: maxLength(50)
     },
@@ -89,7 +92,7 @@ export default class HireMe extends Vue {
   } = {
     name: {
       required: "Please enter your name",
-      alpha: "Your name may contain letters only",
+      alphaDiacritic: "Your name may contain letters only",
       minLength: "Your name may contain at least 3 letters",
       maxLength: "Your name may contain no more then 50 letters"
     },
