@@ -9,13 +9,13 @@ declare module 'vue/types/vue' {
     _data: any;
     page: Post;
     asyncData({
+      $config,
       store,
-      route,
-      $context
+      route
     }: {
+        $config: any,
         store: any,
-        route: any,
-        $context: any
+        route: any
       }): any;
   }
 }
@@ -29,6 +29,7 @@ export default class GetPageMxn extends Vue {
     store,
     route
   }: {
+      $config: any,
       store: any,
       route: any
     }) {

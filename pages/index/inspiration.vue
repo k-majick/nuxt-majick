@@ -49,7 +49,7 @@ export default class Inspiration extends Vue {
   private filteredPosts: Post = [];
   private filterPosts: any;
   private getPage: any;
-  private page: any = null;
+  public page: any = null;
   private isOpenModal = false;
   public activeModal = 0;
 

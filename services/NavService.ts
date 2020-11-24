@@ -2,7 +2,7 @@ import http from "./HttpService";
 
 class NavService {
 
-  getNav(apiBase, menuId: string) {
+  getNav(apiBase: string, menuId: string) {
     return http.get(apiBase + 'wp-api-menus/v2/menus/' + menuId)
   }
 
