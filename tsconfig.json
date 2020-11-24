@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
     "lib": [
@@ -16,8 +16,12 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"],
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     },
     "types": [
       "@types/node",
@@ -26,6 +30,8 @@
     ]
   },
   "include": [
+    "**/*.ts",
+    "**/*.vue",
     "./types",
     "./**/*"
   ],
