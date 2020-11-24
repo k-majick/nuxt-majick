@@ -53,7 +53,7 @@ body {
 
   &__jungle {
     background-color: $color-red;
-    background-image: url("~@/assets/gfx/jungle-red-min.jpg");
+    background-image: url("~@/assets/gfx/jungle-red-hd.jpg");
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -63,6 +63,9 @@ body {
     min-height: 640px;
     height: 100vh;
     width: 100%;
+    @include mobile {
+      background-image: url("~@/assets/gfx/jungle-red-s.jpg");
+    }
 
     &:after {
       content: '';
