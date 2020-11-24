@@ -9,7 +9,6 @@
       <h2 class="avatar__title">{{ name }}</h2>
       <h2 class="avatar__message--mobile" v-html="message"></h2>
       <div class="avatar__container" v-hover-message="message">
-        <div class="avatar__message"></div>
         <div class="avatar__flipper">
           <div class="avatar__front"></div>
           <div class="avatar__back"></div>
@@ -51,7 +50,7 @@ export default class Header extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "../assets/scss/components/_header";
 @import "../assets/scss/components/_avatar";
 @import "../assets/scss/components/_chevron";

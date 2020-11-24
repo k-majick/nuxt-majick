@@ -8,7 +8,15 @@
       <nuxt-link :to="navItem.object_slug" class="nav__link">{{ navItem.title }}</nuxt-link>
     </li>
   </ul>
-  <nuxt-link :to="'inspiration'"  class="cat" v-html="cat" />
+  <ul class="nav__social">
+    <li class="nav__socialItem">
+      <a class="nav__socialLink" href="https://github.com/k-majick" target="_blank" v-html="gitIcon" v-hover-message="msgGit"></a>
+    </li>
+    <li class="nav__socialItem">
+      <a class="nav__socialLink" href="https://www.linkedin.com/in/maciej-klimowicz" target="_blank" v-html="linkedinIcon" v-hover-message="msgLinkedin"></a>
+    </li>
+  </ul>
+  <nuxt-link :to="'inspiration'" class="cat" v-html="cat" />
 </nav>
 </template>
 
@@ -21,14 +29,30 @@ import NavService from '../services/NavService';
 import Post from '../types/Post';
 import ScrollToMxn from "~/mixins/scrollToMxn";
 import rawCat from '@/assets/gfx/cat_1.svg?raw';
+import rawIconGit from '@/assets/gfx/icon-git-min.svg?raw';
+import rawIconLinkedin from '@/assets/gfx/icon-linkedin-min.svg?raw';
+import {
+  hoverMessage
+} from '../directives/hoverMessage';
+import {
+  MESSAGE_LINKEDIN,
+  MESSAGE_GIT
+} from '../app.settings';
 
 @Component({
+  directives: {
+    hoverMessage,
+  },
   mixins: [ScrollToMxn]
 })
 export default class Nav extends Vue {
   // eslint-disable-next-line
   private navItems: any[] = [];
   private cat = rawCat;
+  private gitIcon = rawIconGit;
+  private linkedinIcon = rawIconLinkedin;
+  private msgLinkedin: string = MESSAGE_LINKEDIN;
+  private msgGit: string = MESSAGE_GIT;
 
   created() {
     this.getNav();
@@ -39,10 +63,10 @@ export default class Nav extends Vue {
       this.navItems = res.data.items;
     });
   }
-  
+
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "../assets/scss/components/_nav";
 </style>

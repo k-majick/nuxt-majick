@@ -47,12 +47,8 @@
     background-size: contain;
     background-image: url("~@/assets/gfx/bg-modal-min.svg"), linear-gradient(to right, $color-white 240px, transparentize($color-white, 0.15) 100%);
 
-    &:after,
     &:before {
       width: 100% !important;
-    }
-
-    &:before {
       height: 5px !important;
       top: 100% !important;
       right: 0 !important;
@@ -161,7 +157,6 @@
       width: 100%;
       text-align: left;
     }
-
     // &:not([href="/projects"]):after {
     &:after {
       @include trans(2, max-width);
@@ -195,6 +190,70 @@
 
     &:visited {
       color: $color-black;
+    }
+  }
+
+  &__social {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 7.5px 15px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    @include tablet {
+      flex-flow: column;
+      left: auto;
+      right: 0;
+      top: 0;
+      width: 90px;
+      height: 100%;
+      justify-content: space-around;
+    }
+    @include mobile {
+      top: 60px;
+    }
+
+    &Item {
+      padding: 5px;
+    }
+
+    &Link {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      cursor: pointer;
+      position: relative;
+
+      svg {
+        @include img;
+        position: absolute;
+        left: 0;
+        top: 0;
+        filter: drop-shadow(0 0 5px $color-gray);
+
+        path {
+          @include trans(0.33);
+          max-width: 100%;
+          max-height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          fill: $color-white;
+        }
+
+        &:hover {
+          path {
+            fill: $color-red;
+          }
+        }
+      }
     }
   }
 }

@@ -2,12 +2,18 @@ import { Vue } from 'vue-property-decorator';
 
 interface Binding extends Object {
   value?: string;
+  expression?: string;
 }
 
 export const hoverMessage = {
   bind(el: HTMLElement, binding: Binding) {
-    const msgBox = el.children[0] as HTMLElement;
+    // const msgBox = el.children[0] as HTMLElement;
     const msg = binding.value;
+
+    const msgBox = document.createElement("div");
+    msgBox.classList.add('avatar__message');
+    el.appendChild(msgBox);
+
 
     el.addEventListener('mouseenter', () => {
       msgBox.innerHTML = msg as string;
