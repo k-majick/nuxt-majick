@@ -1,6 +1,9 @@
 {
   "name": "nuxt-majick",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "engines": {
+    "node": "15.x"
+  },
   "private": true,
   "scripts": {
     "dev": "nuxt-ts --port 8888",
