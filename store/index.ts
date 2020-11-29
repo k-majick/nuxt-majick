@@ -9,5 +9,5 @@ class State {
 }
 
 export const store = new Vuex.Store({
-  state: new State(),
+  state: new State()
 });

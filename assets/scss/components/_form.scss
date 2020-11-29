@@ -3,6 +3,12 @@
   max-width: 720px;
   width: 100%;
 
+  &--login {
+    #{$self}__group:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
   &__group {
     display: flex;
     flex-flow: column-reverse;
@@ -32,6 +38,13 @@
       display: flex;
       align-items: center;
       margin-bottom: 15px;
+    }
+
+    &--alert {
+      #{$self}__alert {
+        text-align: center;
+        font-size: 1em;
+      }
     }
   }
 

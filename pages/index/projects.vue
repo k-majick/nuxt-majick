@@ -72,7 +72,7 @@ export default class Projects extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../assets/scss/components/_projects";
 @import "../../assets/scss/components/_modal";
 </style>
