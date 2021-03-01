@@ -1,5 +1,5 @@
 export const NAME = 'K-Majick';
-export const MESSAGE = 'Hello! My name is <strong>K-Majick</strong>. I work as a&nbsp;professional <strong>Front-End Developer</strong>.';
+export const MESSAGE = 'Hello! My name is <strong>K-Majick</strong>. I work as a&nbsp;professional <strong>JavaScript Developer</strong>.';
 export const MESSAGE_GIT = 'Check out my <strong>GitHub repos</strong>';
 export const MESSAGE_LINKEDIN = 'Check out my <strong>LinkedIn profile</strong>';
 

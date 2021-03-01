@@ -6,14 +6,13 @@
   },
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts --port 8888",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt --port 8888",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "test": "jest"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
     "body-parser": "^1.19.0",
     "core-js": "^3.6.5",
