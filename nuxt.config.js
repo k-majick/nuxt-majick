@@ -1,6 +1,6 @@
 export default {
-  // target: 'server',
-  mode: 'spa',
+  target: 'static',
+  // ssr: 'true',
   head: {
     title: process.env.VUE_APP_TITLE,
     meta: [{

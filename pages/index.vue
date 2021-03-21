@@ -50,6 +50,7 @@ export default class App extends Vue {
 
   mounted() {
     this.scrollListen();
+    this.$router.push(this.localePath('index-start'));
   }
 
 }
