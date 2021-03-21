@@ -2,7 +2,7 @@
   "name": "nuxt-majick",
   "version": "1.0.1",
   "engines": {
-    "node": "14.x"
+    "node": "15.x"
   },
   "private": true,
   "scripts": {
@@ -39,8 +39,8 @@
     "normalize-scss": "^7.0.1",
     "nuxt-property-decorator": "^2.8.8",
     "sass-loader": "^10.0.2",
-    "typescript": "^4.2.3",
     "ts-jest": "^26.4.4",
+    "typescript": "^4.2.3",
     "vue-jest": "^3.0.7",
     "vuelidate": "^0.7.5",
     "vuex-module-decorators": "^1.0.1"
