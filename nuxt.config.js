@@ -1,5 +1,5 @@
 export default {
-  target: 'static',
+  target: 'server',
   head: {
     title: process.env.VUE_APP_TITLE,
     meta: [{
