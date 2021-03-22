@@ -84,7 +84,6 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/svg',
-    '@xdn/nuxt/module',
   ],
   modules: [
     '@nuxtjs/axios',
