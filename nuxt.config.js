@@ -1,6 +1,6 @@
 export default {
-  target: 'static',
-  // ssr: 'true',
+  target: 'server',
+  ssr: 'true',
   head: {
     title: process.env.VUE_APP_TITLE,
     meta: [{
@@ -59,8 +59,7 @@ export default {
     ]
   },
   publicRuntimeConfig: {
-    baseUrl: process.env.VUE_BASE_URL || 'http://localhost:8888',
-    baseApi: process.env.VUE_BASE_API || 'https://api.cyberleaf.pl/wp-json/',
+    baseApi: process.env.API_URL,
   },
   router: {
     linkActiveClass: 'active',
