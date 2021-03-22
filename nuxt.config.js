@@ -1,6 +1,6 @@
 export default {
-  target: 'static',
-  // ssr: 'true',
+  target: 'server',
+  ssr: 'true',
   head: {
     title: process.env.VUE_APP_TITLE,
     meta: [{
@@ -88,6 +88,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    '@xdn/nuxt/module',
   ],
   build: {
     extend: function(config, {
