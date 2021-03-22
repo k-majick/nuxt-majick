@@ -1,6 +1,6 @@
 export default {
-  target: 'server',
-  ssr: 'true',
+  target: 'static',
+  // ssr: 'true',
   head: {
     title: process.env.VUE_APP_TITLE,
     meta: [{
@@ -84,11 +84,11 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/svg',
+    '@xdn/nuxt/module',
   ],
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    '@xdn/nuxt/module',
   ],
   build: {
     extend: function(config, {
