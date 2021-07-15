@@ -16,8 +16,8 @@
       </div>
       <div class="avatar__shadow"></div>
     </div>
-    <div class="header__arrow" @click="scrollTo('main')"></div>
-    <a class="chevron__container" @click="scrollTo('main')">
+    <div class="header__arrow" @click="scrollTo('main'); setRoute()"></div>
+    <a class="chevron__container" @click="scrollTo('main'); setRoute()">
       <div class="chevron"></div>
     </a>
   </section>
@@ -47,6 +47,12 @@ import ScrollToMxn from "~/mixins/scrollToMxn";
 export default class Header extends Vue {
   private name: string = NAME;
   private message: string = MESSAGE;
+
+  setRoute() {
+    if (this.$route.path !== '/') this.$router.push({
+      path: '/skills'
+    });
+  }
 }
 </script>
 
